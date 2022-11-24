@@ -15,6 +15,11 @@ def hello_world():
 def about():
     return render_template("about.html")
 
+
+@app.route("/services")
+def services():
+    return render_template("services.html")
+
 @app.route('/contact', methods=["POST", "GET"])
 def contact():
     if request.method == 'POST':
@@ -24,9 +29,9 @@ def contact():
             connection.sendmail(
                 from_addr=my_email,
                 to_addrs=my_email,
-                msg=f"Subject:{request.form['subject']}\n\nName {request.form['name']}\n Email:{request.form['email']}\n Contact:"
-                    f"{request.form['telephone']}\n Message:{request.form['message']}")
-        return render_template("thanks.html")
+                msg=f"Subject:New Candidate pls follow up\n\nName {request.form['name']}\n Email:{request.form['email']}\n Contact:"
+                    f"{request.form['contact']}\n Message:{request.form['message']}")
+        return render_template("index.html")
     else:
         return render_template("contact.html")
 

@@ -24,8 +24,7 @@ section, summary, time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;}
+	font: inherit;}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -3886,5 +3885,9 @@ input, select, textarea {
 
 #wrapper {
 background-color:ff4b29;
-
 }
+
+#wrapper h1,h2{
+color:#FFFFFF;
+}
+
